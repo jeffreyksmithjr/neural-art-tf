@@ -63,10 +63,11 @@ def parseArgs():
     return args.content, args.style, args.modelpath, args.model, args.width, args.alpha, args.beta, args.iters, args.device, args
 
 def getModel(image, params_path, model):
-    if model == 'vgg':
+    if model == 'VGG':
         return VGG16(image, params_path)
-    elif model == 'i2v':
+    elif model == 'I2V':
         return I2V(image, params_path)
     else:
-        print 'Invalid model name: use `vgg` or `i2v`'
+        print 'Invalid model name: use `VGG` or `I2V`'
         return None
+
